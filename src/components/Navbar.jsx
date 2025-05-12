@@ -1,6 +1,7 @@
 import { Link } from 'react-router-dom'
 import Logo from '/logo.png'
 import { FiSearch } from 'react-icons/fi'
+import { GiHamburger } from 'react-icons/gi'
 
 const Navbar = () => {
   const navElement = [
@@ -11,7 +12,7 @@ const Navbar = () => {
   ]
 
   return (
-    <nav className='flex justify-between items-center bg-transparent text-heroGreen p-3 px-14'>
+    <nav className='flex justify-between items-center bg-transparent text-heroGreen p-3 px-20'>
       <Link to={'/'}>
         <img src={Logo} alt='learn recipe logo' width={50} height={50} />
       </Link>
@@ -33,8 +34,10 @@ const Navbar = () => {
             className='pl-10 pr-4 py-1 border rounded-full'
           />
         </div>
-        <button>Sign up</button>
-        <button>Login</button>
+        <button className='bg-heroGreen text-white rounded-lg px-3'>
+          Sign up
+        </button>
+        <button className='bg-white rounded-lg px-3 shadow-md'>Login</button>
       </div>
     </nav>
   )
