@@ -24,18 +24,22 @@ const Navbar = () => {
 
       <div
         className={`${
-          isMenuOpen ? 'flex gap-4' : 'hidden'
-        } absolute flex-col items-center p-3 gap-4 bg-heroGreen right-0 md:static md:flex md:flex-row md:gap-4`}
+          isMenuOpen ? 'flex' : 'hidden'
+        } absolute flex-col gap-6 top-20 w-[270px] h-[300px] p-3 items-center md:static md:flex md:flex-row  md:w-auto shadow-lg right-1 md:shadow-none md:h-0 md:gap-8 bg-heroGreenlight md:bg-transparent `}
       >
         {navElement.map((item) => (
-          <Link to={item.link} key={item.name}>
+          <Link
+            to={item.link}
+            key={item.name}
+            onClick={() => setIsMenuOpen(false)}
+          >
             {item.name}
           </Link>
         ))}
       </div>
 
-      <div className='flex gap-4'>
-        <div className='relative'>
+      <div className='md:flex gap-4 '>
+        <div className='relative hidden md:block'>
           <FiSearch className='absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-600' />
           <input
             type='search'
@@ -50,16 +54,15 @@ const Navbar = () => {
         <button className='bg-white rounded-lg px-3 shadow-md'>
           <Link>Login</Link>
         </button>
-      </div>
-
-      <div>
-        <button onClick={toogleMenu} className='hidden'>
-          {isMenuOpen ? (
-            <GiHamburger className='bg-heroGreen text-white rounded-md' />
-          ) : (
-            <IoCloseSharp className='bg-heroGreen text-white rounded-md' />
-          )}
-        </button>
+        <div>
+          <button onClick={toogleMenu} className='md:hidden'>
+            {isMenuOpen ? (
+              <IoCloseSharp className='bg-heroGreen text-white rounded-md w-10 h-8' />
+            ) : (
+              <GiHamburger className='bg-heroGreen text-white rounded-md w-10 h-8' />
+            )}
+          </button>
+        </div>
       </div>
     </nav>
   )
