@@ -38,8 +38,8 @@ const Navbar = () => {
         ))}
       </div>
 
-      <div className='md:flex gap-4 '>
-        <div className='relative hidden md:block'>
+      <div className='md:flex gap-4 hidden'>
+        <div className='relative '>
           <FiSearch className='absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-600' />
           <input
             type='search'
@@ -57,9 +57,9 @@ const Navbar = () => {
         <div>
           <button onClick={toogleMenu} className='md:hidden'>
             {isMenuOpen ? (
-              <IoCloseSharp className='bg-heroGreen text-white rounded-md w-10 h-8' />
+              <IoCloseSharp className='bg-heroGreen text-white rounded-md w-8 h-8' />
             ) : (
-              <GiHamburger className='bg-heroGreen text-white rounded-md w-10 h-8' />
+              <GiHamburger className='bg-heroGreen text-white rounded-md w-8 h-8' />
             )}
           </button>
         </div>
