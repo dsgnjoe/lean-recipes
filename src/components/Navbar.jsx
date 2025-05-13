@@ -2,6 +2,8 @@ import { Link } from 'react-router-dom'
 import Logo from '/logo.png'
 import { FiSearch } from 'react-icons/fi'
 import { GiHamburger } from 'react-icons/gi'
+import { IoCloseSharp } from 'react-icons/io5'
+import { useState } from 'react'
 
 const Navbar = () => {
   const navElement = [
@@ -11,13 +13,20 @@ const Navbar = () => {
     { name: 'Contact', link: '/contact' },
   ]
 
+  const [isMenuOpen, setIsMenuOpen] = useState(false)
+  const toogleMenu = () => setIsMenuOpen(!isMenuOpen)
+
   return (
     <nav className='flex justify-between items-center bg-transparent text-heroGreen p-3 px-20'>
       <Link to={'/'}>
         <img src={Logo} alt='learn recipe logo' width={50} height={50} />
       </Link>
 
-      <div className='flex gap-4'>
+      <div
+        className={`${
+          isMenuOpen ? 'flex gap-4' : 'hidden'
+        } absolute flex-col items-center p-3 gap-4 bg-heroGreen right-0 md:static md:flex md:flex-row md:gap-4`}
+      >
         {navElement.map((item) => (
           <Link to={item.link} key={item.name}>
             {item.name}
@@ -31,13 +40,26 @@ const Navbar = () => {
           <input
             type='search'
             placeholder='Search...'
-            className='pl-10 pr-4 py-1 border rounded-full'
+            className='px-10 py-2 border rounded-full'
           />
         </div>
+
         <button className='bg-heroGreen text-white rounded-lg px-3'>
-          Sign up
+          <Link to={'/sign-up'}>Sign up</Link>
         </button>
-        <button className='bg-white rounded-lg px-3 shadow-md'>Login</button>
+        <button className='bg-white rounded-lg px-3 shadow-md'>
+          <Link>Login</Link>
+        </button>
+      </div>
+
+      <div>
+        <button onClick={toogleMenu} className='hidden'>
+          {isMenuOpen ? (
+            <GiHamburger className='bg-heroGreen text-white rounded-md' />
+          ) : (
+            <IoCloseSharp className='bg-heroGreen text-white rounded-md' />
+          )}
+        </button>
       </div>
     </nav>
   )
