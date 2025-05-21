@@ -24,6 +24,7 @@ const LatestRecipes = () => {
   return (
     <div>
       <header className='font-bold text-2xl mb-5'>Latest Recipes</header>
+      <span className='badge rounded-pill text-bg-success'>vegitarian</span>
     </div>
   )
 }
