@@ -3,7 +3,7 @@ import { IoArrowForwardCircleOutline } from 'react-icons/io5'
 
 const Hero = () => {
   return (
-    <div className='md:relative bg-heroGreen rounded-xl flex items-center md:justify-between font-hostGrotesk md:py-16 md:mt-28'>
+    <div className=' md:relative bg-heroGreen rounded-xl md:flex items-center md:justify-between font-hostGrotesk md:py-16 md:mt-28 md:mx-20'>
       <div className='flex flex-col h-full w-1/2 p-10 pl-20'>
         <h1 className='text-white text-5xl font-bold leading-normal'>
           Welcome to Lean Recipes, Your Ultimate Guide to Healthy Eating
@@ -20,7 +20,7 @@ const Hero = () => {
       <img
         src={HeroImg}
         alt='heroImg'
-        className='absolute z-10 object-cover right-20'
+        className='md:absolute object-cover right-20'
         width={550}
       />
     </div>
