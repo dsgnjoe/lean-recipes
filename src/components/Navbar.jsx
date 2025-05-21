@@ -25,14 +25,15 @@ const Navbar = () => {
       <div
         className={`${
           isMenuOpen ? 'flex' : 'hidden'
-        } flex-col gap-4 py-5 absolute top-16 right-0 w-2/3 text-center bg-heroGreenLight
-    md:flex md:flex-row md:static md:w-auto md:bg-transparent md:!py-0`}
+        } flex-col gap-4 top-16 right-0 w-2/3 text-center bg-heroGreenLight py-5 absolute 
+      md:flex md:flex-row md:static md:bg-transparent md:w-auto md:py-0`}
       >
         {navElement.map((item) => (
           <Link
             to={item.link}
             key={item.name}
             onClick={() => setIsMenuOpen(false)}
+            className='text-heroGreen font-hostGrotesk'
           >
             {item.name}
           </Link>
