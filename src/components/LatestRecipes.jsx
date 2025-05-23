@@ -22,7 +22,7 @@ const LatestRecipes = () => {
   })
 
   return (
-    <div>
+    <div className='bg-white w-full mt-28 md:px-20 pt-5'>
       <header className='font-bold text-2xl mb-5'>Latest Recipes</header>
     </div>
   )
