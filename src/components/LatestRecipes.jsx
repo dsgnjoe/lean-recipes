@@ -1,6 +1,7 @@
 import { useState } from 'react'
 import { useEffect } from 'react'
 import { useNavigate } from 'react-router-dom'
+import { latestRecipe } from '../data'
 
 const LatestRecipes = () => {
   const [loading, setLoading] = useState(true)
@@ -9,17 +10,9 @@ const LatestRecipes = () => {
   const navigate = useNavigate()
 
   useEffect(() => {
-    fetch('/')
-      .then((res) => res.json())
-      .then((data) => {
-        setRecipes(data)
-        setLoading(false)
-      })
-      .catch((error) => {
-        console.log('error fetching data', error)
-        setLoading(false)
-      })
-  })
+    setRecipes(latestRecipe)
+    setLoading(false)
+  }, [])
 
   return (
     <div className='bg-white w-full mt-28 md:px-20 pt-5'>
