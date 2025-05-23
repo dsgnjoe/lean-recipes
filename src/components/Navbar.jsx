@@ -17,7 +17,7 @@ const Navbar = () => {
   const toogleMenu = () => setIsMenuOpen(!isMenuOpen)
 
   return (
-    <nav className='flex justify-between items-center bg-transparent p-3 '>
+    <nav className='flex justify-between items-center bg-transparent p-3 md:!px-20'>
       <Link to={'/'}>
         <img src={Logo} alt='lean recipe logo' width={50} height={50} />
       </Link>
@@ -26,7 +26,7 @@ const Navbar = () => {
         className={`${
           isMenuOpen ? 'flex' : 'hidden'
         } flex-col gap-4 top-16 right-0 w-2/3 text-center bg-heroGreenLight py-5 absolute 
-      md:flex md:flex-row md:static md:bg-transparent md:w-auto md:py-0`}
+      md:flex md:flex-row md:static md:bg-transparent md:w-auto md:!py-0`}
       >
         {navElement.map((item) => (
           <Link
