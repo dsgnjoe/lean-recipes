@@ -18,17 +18,17 @@ const LatestRecipes = () => {
   }, [])
 
   return (
-    <div className='bg-white w-full mt-28 md:px-20 pt-5'>
+    <div className='bg-white w-full md:mt-32 md:px-20 md:pt-20'>
       <header className='font-bold text-2xl mb-5'>Latest Recipes</header>
 
       {loading ? (
         <Spinner />
       ) : (
-        <div className='grid grid-cols-1 md:grid-cols-3 gap-5'>
+        <div className='grid grid-cols-1 md:grid-cols-3 gap-20'>
           {recipes.map((recipes, index) => (
             <div
               key={index}
-              className='bg-gray-100 rounded-lg cursor-pointer hover:shadow-lg transition-shadow duration-300 '
+              className='rounded-lg cursor-pointer hover:shadow-lg transition-shadow duration-300 w-[350px] border border-gray-200 pb-2'
               onClick={() => navigate(`/recipe/${recipes.id}`)}
             >
               {/* recipe image */}
@@ -43,13 +43,13 @@ const LatestRecipes = () => {
                 <h2 className='text-xl font-semibold mt-3'>{recipes.name}</h2>
                 <p className='text-gray-600 mt-1'>By {recipes.chef}</p>
 
-                <div className='flex justify-between items-center'>
+                <div className='flex justify-between items-center mt-1'>
                   <span className='text-gray-500 text-sm'>
                     <GoClock className='inline-block' /> {recipes.minutes}{' '}
                     minutes
                   </span>
                   <span>
-                    <IoBookmarkOutline />
+                    <IoBookmarkOutline className='font-bold text-xl' />
                   </span>
                 </div>
               </div>
