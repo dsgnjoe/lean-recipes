@@ -1,4 +1,11 @@
 import { FiSearch } from 'react-icons/fi'
+import { IoArrowForwardCircleOutline } from 'react-icons/io5'
+import { Link } from 'react-router-dom'
+import Logo from '/logo.png'
+import { FaFacebook } from 'react-icons/fa'
+import { BsTwitterX } from 'react-icons/bs'
+import { FaInstagram } from 'react-icons/fa'
+import { FaLinkedin } from 'react-icons/fa'
 
 const Footer = () => {
   return (
@@ -18,6 +25,29 @@ const Footer = () => {
             placeholder='Search...'
             className='px-10 py-2 border rounded-lg w-full'
           />
+        </div>
+        <button className='text-white bg-footerExGreen py-3 px-3 rounded-lg font-light w-1/2'>
+          Explore Recipes
+          <IoArrowForwardCircleOutline className='inline-block ml-4' />
+        </button>
+
+        <Link to={'/'}>
+          <img src={Logo} alt='lean recipe logo' width={50} height={50} />
+        </Link>
+
+        <div className='flex items-center gap-3'>
+          <Link>
+            <FaFacebook className='text-white text-2xl' />
+          </Link>
+          <Link>
+            <BsTwitterX className='text-white text-2xl' />
+          </Link>
+          <Link>
+            <FaInstagram className='text-white text-2xl' />
+          </Link>
+          <Link>
+            <FaLinkedin className='text-white text-2xl' />
+          </Link>
         </div>
       </div>
     </div>

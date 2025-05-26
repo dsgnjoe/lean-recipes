@@ -7,6 +7,7 @@ export default {
         heroGreen: '#074F43',
         heroGreenLight: '#EDFCF2',
         footerGreen: '#084C2E',
+        footerExGreen: '#095C37',
       },
       fontFamily: {
         hostGrotesk: ['Host Grotesk', 'sans-serif'],
