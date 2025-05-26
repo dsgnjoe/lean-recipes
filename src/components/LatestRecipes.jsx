@@ -5,6 +5,7 @@ import { latestRecipe } from '../data'
 import Spinner from './Spinner'
 import { GoClock } from 'react-icons/go'
 import { IoBookmarkOutline } from 'react-icons/io5'
+import Vegies from './Vegies'
 
 const LatestRecipes = () => {
   const [loading, setLoading] = useState(true)
@@ -37,9 +38,11 @@ const LatestRecipes = () => {
                 alt={recipes.title}
                 className='w-full h-40 object-cover rounded-t-lg'
               />
+              {/* Vegies component */}
 
               {/* Recipe data */}
               <div className='p-4'>
+                <Vegies />
                 <h2 className='text-xl font-semibold mt-3'>{recipes.name}</h2>
                 <p className='text-gray-600 mt-1'>By {recipes.chef}</p>
 
