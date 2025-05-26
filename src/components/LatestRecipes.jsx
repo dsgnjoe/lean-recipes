@@ -18,7 +18,7 @@ const LatestRecipes = () => {
   }, [])
 
   return (
-    <div className='bg-white w-full md:mt-32 md:px-20 md:pt-20'>
+    <div className='bg-white w-full px-3 md:mt-32 md:px-20 md:pt-20'>
       <header className='font-bold text-2xl mb-5'>Latest Recipes</header>
 
       {loading ? (
