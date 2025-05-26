@@ -20,19 +20,19 @@ const Footer = () => {
           Looking for something specific? Our smart search bar makes it easy to
           find the perfect recipe in seconds.
         </p>
-        <div></div>
-        <div className='relative'>
-          <FiSearch className='absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-600' />
+        <div className='flex flex-col md:flex-row w-full relative gap-2'>
+          <FiSearch className='absolute left-3 top-1/4 md:top-1/2 transform -translate-y-1/2 text-gray-600' />
           <input
             type='search'
             placeholder='Search...'
-            className='px-10 py-2 border rounded-lg w-full md:w-1/2'
+            className='px-10 py-2 border rounded-lg w-full md:w-[550px] '
           />
+
+          <button className='text-white bg-footerExGreen py-2 px-3 rounded-lg font-light w-1/2 md:w-[190px] md:px-1 '>
+            Explore Recipes
+            <IoArrowForwardCircleOutline className='inline-block ml-4' />
+          </button>
         </div>
-        <button className='text-white bg-footerExGreen py-3 px-3 rounded-lg font-light w-1/2'>
-          Explore Recipes
-          <IoArrowForwardCircleOutline className='inline-block ml-4' />
-        </button>
 
         <Link to={'/'}>
           <img src={Logo} alt='lean recipe logo' width={50} height={50} />
