@@ -11,7 +11,7 @@ const Footer = () => {
   const footerYear = new Date().getFullYear()
 
   return (
-    <div className='mt-10 bg-footerGreen p-3 pt-5 md:px-20 md:py-10'>
+    <div className='mt-10 bg-footerGreen p-3 pt-5 md:px-20 md:pt-10 md:pb-5'>
       <div className='flex flex-col  justify-center gap-4'>
         <h3 className='text-4xl font-bold font-outfit text-white'>
           Effortless Recipe Search At Your Fingertips
@@ -34,27 +34,37 @@ const Footer = () => {
           </button>
         </div>
 
-        <Link to={'/'}>
-          <img src={Logo} alt='lean recipe logo' width={50} height={50} />
-        </Link>
+        <div className='flex flex-col md:flex-row md:items-center gap-2 md:justify-between md:mt-5 md:border-t '>
+          <div className='md:flex md:items-center md:justify-center md:gap-12'>
+            <Link to={'/'}>
+              <img
+                src={Logo}
+                alt='lean recipe logo'
+                width={50}
+                height={50}
+                className='md:mt-1 '
+              />
+            </Link>
 
-        <div className='flex items-center gap-3'>
-          <Link>
-            <FaFacebook className='text-white text-2xl' />
-          </Link>
-          <Link>
-            <BsTwitterX className='text-white text-2xl' />
-          </Link>
-          <Link>
-            <FaInstagram className='text-white text-2xl' />
-          </Link>
-          <Link>
-            <FaLinkedin className='text-white text-2xl' />
-          </Link>
-        </div>
-        {/* Copyright Section */}
-        <div className=' text-white text-sm py-2'>
-          <p> &copy; {footerYear} Lean Recipes</p>
+            <div className='flex items-center gap-3'>
+              <Link>
+                <FaFacebook className='text-white text-2xl' />
+              </Link>
+              <Link>
+                <BsTwitterX className='text-white text-2xl' />
+              </Link>
+              <Link>
+                <FaInstagram className='text-white text-2xl' />
+              </Link>
+              <Link>
+                <FaLinkedin className='text-white text-2xl' />
+              </Link>
+            </div>
+          </div>
+          {/* Copyright Section */}
+          <div className=' text-white text-sm py-2'>
+            <p> &copy; {footerYear} Lean Recipes</p>
+          </div>
         </div>
       </div>
     </div>
