@@ -8,6 +8,8 @@ import { FaInstagram } from 'react-icons/fa'
 import { FaLinkedin } from 'react-icons/fa'
 
 const Footer = () => {
+  const footerYear = new Date().getFullYear()
+
   return (
     <div className='mt-10 bg-footerGreen p-3 pt-5'>
       <div className='flex flex-col  justify-center gap-4'>
@@ -48,6 +50,10 @@ const Footer = () => {
           <Link>
             <FaLinkedin className='text-white text-2xl' />
           </Link>
+        </div>
+        {/* Copyright Section */}
+        <div className=' text-white text-sm py-2'>
+          <p> &copy; {footerYear} Lean Recipes</p>
         </div>
       </div>
     </div>
