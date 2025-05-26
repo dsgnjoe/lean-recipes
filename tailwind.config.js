@@ -6,9 +6,11 @@ export default {
       colors: {
         heroGreen: '#074F43',
         heroGreenLight: '#EDFCF2',
+        footerGreen: '#084C2E',
       },
       fontFamily: {
         hostGrotesk: ['Host Grotesk', 'sans-serif'],
+        outfit: ['Outfit', 'sans-serif'],
       },
     },
   },
