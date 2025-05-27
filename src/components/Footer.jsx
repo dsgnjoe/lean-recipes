@@ -13,6 +13,7 @@ const Footer = () => {
   return (
     <div className='mt-10 bg-footerGreen p-3 pt-5 md:px-20 md:pt-10 md:pb-5'>
       <div className='flex flex-col  justify-center gap-4'>
+        {/* footer heading */}
         <h3 className='text-4xl font-bold font-outfit text-white'>
           Effortless Recipe Search At Your Fingertips
         </h3>
@@ -27,13 +28,13 @@ const Footer = () => {
             placeholder='Search...'
             className='px-10 py-2 border rounded-lg w-full md:w-[550px] '
           />
-
+          {/* explore button */}
           <button className='text-white bg-footerExGreen py-2 px-3 rounded-lg font-light w-1/2 md:w-[190px] md:px-1 '>
             Explore Recipes
             <IoArrowForwardCircleOutline className='inline-block ml-4' />
           </button>
         </div>
-
+        {/* logo */}
         <div className='flex flex-col md:flex-row md:items-center gap-2 md:justify-between md:mt-5 md:border-t '>
           <div className='md:flex md:items-center md:justify-center md:gap-12'>
             <Link to={'/'}>
@@ -46,6 +47,7 @@ const Footer = () => {
               />
             </Link>
 
+            {/* icons */}
             <div className='flex items-center gap-3'>
               <Link>
                 <FaFacebook className='text-white text-2xl' />
