@@ -64,7 +64,7 @@ const Navbar = () => {
           <Link to={'/sign-up'}>Sign up</Link>
         </button>
         <button className='bg-white rounded-lg px-3 shadow-md'>
-          <Link>Login</Link>
+          <Link to={'/login'}>Login</Link>
         </button>
       </div>
     </nav>
