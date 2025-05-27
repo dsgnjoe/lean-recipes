@@ -6,6 +6,7 @@ import Contact from './pages/Contact'
 import Login from './pages/Login'
 import Recipes from './pages/Recipes'
 import SignUp from './pages/SignUp'
+import Categories from './pages/Categories'
 
 function App() {
   return (
@@ -19,6 +20,7 @@ function App() {
             <Route path='/login' element={<Login />} />
             <Route path='/recipes' element={<Recipes />} />
             <Route path='/sign-up' element={<SignUp />} />
+            <Route path='/categories' element={<Categories />} />
           </Route>
         </Routes>
       </Router>
