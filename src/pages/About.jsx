@@ -9,7 +9,7 @@ const About = () => {
         </span>
       </header>
 
-      <section className='my-5 flex flex-col items-center justify-center text-center gap-2'>
+      <section className='my-5 flex flex-col items-center justify-center text-center gap-5'>
         <div>
           <h1 className='font-bold text-2xl py-2'>Search & Discover</h1>
           <p className='font-thin pb-3'>
@@ -20,20 +20,17 @@ const About = () => {
           <img src='/img1.png' alt='image' />
         </div>
         <div>
-          <h1 className='font-bold text-2xl py-2'>Search & Discover</h1>
+          <h1 className='font-bold text-2xl py-2'>View Recipe Details</h1>
           <p className='font-thin pb-3'>
-            Explore a vast collection of recipes for every meal, diet, and
-            cuisine using smart filters to find recipes by ingredients,
-            difficulty, or cook time.
+            Access step-by-step instructions with ingredient lists, measurement
+            and estimated cooking time.
           </p>
           <img src='/img1.png' alt='image' />
         </div>
         <div>
-          <h1 className='font-bold text-2xl py-2'>Search & Discover</h1>
+          <h1 className='font-bold text-2xl py-2'>Create & Save Recipes</h1>
           <p className='font-thin pb-3'>
-            Explore a vast collection of recipes for every meal, diet, and
-            cuisine using smart filters to find recipes by ingredients,
-            difficulty, or cook time.
+            Create your own recipe and store them in your organized categories
           </p>
           <img src='/img1.png' alt='image' />
         </div>
