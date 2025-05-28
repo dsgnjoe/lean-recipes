@@ -11,7 +11,7 @@ const Footer = () => {
   const footerYear = new Date().getFullYear()
 
   return (
-    <div className='mt-10 bg-footerGreen p-3 pt-5 md:px-20 md:pt-10 md:pb-5'>
+    <div className=' bg-footerGreen p-3 pt-5 md:px-20 md:pt-10 md:pb-5'>
       <div className='flex flex-col  justify-center gap-4'>
         {/* footer heading */}
         <h3 className='text-4xl font-bold font-outfit text-white'>

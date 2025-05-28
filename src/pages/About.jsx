@@ -1,6 +1,6 @@
 const About = () => {
   return (
-    <div className='px-3 md:px-20 font-hostGrotesk bg-heroGreenLight'>
+    <div className='px-3 md:px-20 pb-5 font-hostGrotesk bg-heroGreenLight'>
       <header className='text-center'>
         <h1 className='font-bold text-4xl py-2 md:py-5'>About Lean Recipe</h1>
         <span className='text-lg font-thin md:text-2xl '>
@@ -10,7 +10,7 @@ const About = () => {
       </header>
 
       <section className='my-5 flex flex-col items-center justify-center text-center gap-5 md:text-left'>
-        <div className='md:flex md:gap-16'>
+        <div className='md:flex md:gap-14 md:mt-10'>
           <div>
             <h1 className='font-bold text-2xl md:text-3xl py-2'>
               Search & Discover
@@ -23,19 +23,29 @@ const About = () => {
           </div>
           <img src='/img1.png' alt='image' />
         </div>
-        <div>
-          <h1 className='font-bold text-2xl py-2'>View Recipe Details</h1>
-          <p className='font-thin pb-3'>
-            Access step-by-step instructions with ingredient lists, measurement
-            and estimated cooking time.
-          </p>
+
+        <div className='md:flex md:flex-row-reverse md:gap-14 md:mt-10'>
+          <div>
+            <h1 className='font-bold text-2xl md:text-3xl py-2'>
+              View Recipe Details
+            </h1>
+            <p className='font-thin  md:text-2xl pb-3'>
+              Access step-by-step instructions with ingredient lists,
+              measurement and estimated cooking time.
+            </p>
+          </div>
           <img src='/img1.png' alt='image' />
         </div>
-        <div>
-          <h1 className='font-bold text-2xl py-2'>Create & Save Recipes</h1>
-          <p className='font-thin pb-3'>
-            Create your own recipe and store them in your organized categories
-          </p>
+
+        <div className='md:flex md:gap-10 md:mt-10'>
+          <div>
+            <h1 className='font-bold text-2xl md:text-3xl py-2'>
+              Create & Save Recipes
+            </h1>
+            <p className='font-thin  md:text-2xl pb-3'>
+              Create your own recipe and store them in your organized categories
+            </p>
+          </div>
           <img src='/img1.png' alt='image' />
         </div>
       </section>
