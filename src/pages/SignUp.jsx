@@ -7,7 +7,7 @@ const SignUp = () => {
   })
   const { name, email } = formData
 
-  const onchange = (e) => {
+  const onChange = (e) => {
     const { name, value } = e.target
     setFormData((prevState) => ({
       ...prevState,
@@ -16,11 +16,39 @@ const SignUp = () => {
   }
 
   return (
-    <div className=''>
+    <div className='bg-white font-hostGrotesk rounded-lg mx-3 p-3'>
       <header className='flex flex-col items-center gap-3'>
         <img src='/logo.png' alt='sign up logo' width={50} />
         <h1 className='font-hostGrotesk font-bold text-3xl'>Sign up</h1>
       </header>
+      <form className='flex flex-col gap-5'>
+        <label htmlFor='name'>Full Name:</label>
+        <input
+          type='text'
+          placeholder='John Doe'
+          onChange={onChange}
+          name='name'
+          value={name}
+          className='border'
+          required
+        />
+        <label htmlFor='email'>Email:</label>
+        <input
+          type='email'
+          placeholder='example@email.com'
+          onChange={onChange}
+          name='email'
+          value={email}
+          className=''
+          required
+        />
+        <button
+          type='submit'
+          className='bg-footerGreen text-white p-2 rounded-lg'
+        >
+          Get Started
+        </button>
+      </form>
     </div>
   )
 }
