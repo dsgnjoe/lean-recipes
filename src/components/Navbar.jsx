@@ -4,8 +4,39 @@ import { FiSearch } from 'react-icons/fi'
 import { HiMiniBars3BottomRight } from 'react-icons/hi2'
 import { IoCloseSharp } from 'react-icons/io5'
 import { useState } from 'react'
+import Modal from 'react-modal'
+import SignUp from './SignUp'
+import Login from './Login'
+
+const customStyles = {
+  content: {
+    width: '600px',
+    top: '50%',
+    left: '50%',
+    right: 'auto',
+    bottom: 'auto',
+    marginRight: '-50%',
+    transform: 'translate(-50%, -50%)',
+    position: 'relative',
+  },
+}
+
+Modal.setAppElement('#root')
 
 const Navbar = () => {
+  const [modalIsOpen, setModalIsOpen] = useState(false)
+  const [ActiveForm, setActiveForm] = useState(null)
+
+  const openModal = (form) => {
+    setActiveForm(form)
+    setModalIsOpen(true)
+  }
+
+  const closeModal = () => {
+    setActiveForm(null)
+    setModalIsOpen(false)
+  }
+
   const navElement = [
     { name: 'Categories', link: '/categories' },
     { name: 'Recipes', link: '/recipes' },
@@ -60,12 +91,35 @@ const Navbar = () => {
         </div>
 
         {/* sign in/up */}
-        <button className='bg-heroGreen text-white rounded-lg px-3'>
-          <Link to={'/sign-up'}>Sign up</Link>
+        <button
+          className='bg-heroGreen text-white rounded-lg px-3'
+          onClick={() => openModal('signup')}
+        >
+          Sign up
         </button>
-        <button className='bg-white rounded-lg px-3 shadow-md'>
-          <Link to={'/login'}>Login</Link>
+        <button
+          className='bg-white rounded-lg px-3 shadow-md'
+          onClick={() => openModal('login')}
+        >
+          Login
         </button>
+
+        {/* sign up/login modal */}
+        <Modal
+          isOpen={modalIsOpen}
+          onRequestClose={closeModal}
+          style={customStyles}
+          contentLabel='Authentication Modal'
+        >
+          <button
+            onClick={closeModal}
+            className='absolute top-2 right-2 text-xl font-bold'
+          >
+            &times;
+          </button>
+          {ActiveForm === 'signup' && <SignUp />}
+          {ActiveForm === 'login' && <Login />}
+        </Modal>
       </div>
     </nav>
   )

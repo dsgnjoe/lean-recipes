@@ -3,9 +3,9 @@ import Layout from './components/Layout'
 import Home from './pages/Home'
 import About from './pages/About'
 import Contact from './pages/Contact'
-import Login from './pages/Login'
+import Login from './components/Login'
 import Recipes from './pages/Recipes'
-import SignUp from './pages/SignUp'
+import SignUp from './components/SignUp'
 import Categories from './pages/Categories'
 
 function App() {
