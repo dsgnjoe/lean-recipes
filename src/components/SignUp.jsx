@@ -1,7 +1,6 @@
 import { useState } from 'react'
-import { Link } from 'react-router-dom'
 
-const SignUp = () => {
+const SignUp = ({ switchToLogin }) => {
   const [formData, setFormData] = useState({
     name: '',
     email: '',
@@ -71,12 +70,13 @@ const SignUp = () => {
 
         <p>
           Already have an account?{' '}
-          <Link
-            to={'/login'}
+          <button
+            type='button'
+            onClick={switchToLogin}
             className='text-footerGreen underline underline-offset-2'
           >
             Sign in
-          </Link>
+          </button>
         </p>
       </form>
     </div>

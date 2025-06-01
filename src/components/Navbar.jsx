@@ -25,7 +25,7 @@ Modal.setAppElement('#root')
 
 const Navbar = () => {
   const [modalIsOpen, setModalIsOpen] = useState(false)
-  const [ActiveForm, setActiveForm] = useState(null)
+  const [ActiveForm, setActiveForm] = useState('signup')
 
   const openModal = (form) => {
     setActiveForm(form)
@@ -117,8 +117,12 @@ const Navbar = () => {
           >
             &times;
           </button>
-          {ActiveForm === 'signup' && <SignUp />}
-          {ActiveForm === 'login' && <Login />}
+          {ActiveForm === 'signup' && (
+            <SignUp switchToLogin={() => setActiveForm('login')} />
+          )}
+          {ActiveForm === 'login' && (
+            <Login switchToSignUp={() => setActiveForm('signup')} />
+          )}
         </Modal>
       </div>
     </nav>
