@@ -4,9 +4,9 @@ import Footer from '../components/Footer'
 
 const Layout = () => {
   return (
-    <div className='flex flex-col bg-heroGreenLight h-screen'>
+    <div className='flex flex-col bg-heroGreenLight '>
       <Navbar />
-      <main className='flex-1'>
+      <main className=''>
         <Outlet />
       </main>
       <Footer />
