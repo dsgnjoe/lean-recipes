@@ -25,7 +25,7 @@ const LatestRecipes = () => {
       {loading ? (
         <Spinner />
       ) : (
-        <div className='flex flex-col justify-items-center md:grid md:grid-cols-3 gap-20'>
+        <div className='flex flex-col items-center md:justify-items-center md:grid md:grid-cols-3 gap-20'>
           {recipes.map((recipes, index) => (
             <div
               key={index}
