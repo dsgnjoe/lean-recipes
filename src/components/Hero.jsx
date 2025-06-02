@@ -27,7 +27,7 @@ const Hero = () => {
       <img
         src={HeroImg}
         alt='heroImg'
-        className='md:absolute object-cover md:right-36 md:top-[106px] md:w-[550px] pb-10 md:pb-0'
+        className='md:absolute object-cover md:right-36 md:top-[120px] md:w-[550px] pb-10 md:pb-0'
       />
     </>
   )
