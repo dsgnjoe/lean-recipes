@@ -34,7 +34,7 @@ const About = () => {
               measurement and estimated cooking time.
             </p>
           </div>
-          <img src='/img1.png' alt='image' />
+          <img src='/img2.png' alt='image' className='md:w-1/2' />
         </div>
 
         <div className='md:flex md:gap-10 md:mt-10'>
@@ -46,7 +46,7 @@ const About = () => {
               Create your own recipe and store them in your organized categories
             </p>
           </div>
-          <img src='/img1.png' alt='image' />
+          <img src='/img3.png' alt='image' className='md:w-1/2' />
         </div>
       </section>
     </div>
