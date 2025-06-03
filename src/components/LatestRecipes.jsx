@@ -1,7 +1,7 @@
 import { useState } from 'react'
 import { useEffect } from 'react'
 import { useNavigate } from 'react-router-dom'
-import { latestRecipe } from '../data'
+import data from '../data.json'
 import Spinner from './Spinner'
 import { GoClock } from 'react-icons/go'
 import { IoBookmarkOutline } from 'react-icons/io5'
@@ -17,6 +17,8 @@ const LatestRecipes = () => {
     setRecipes(latestRecipe)
     setLoading(false)
   }, [])
+
+  console.log(data)
 
   return (
     <div className='bg-white w-full px-3 md:px-20 py-10 md:py-20'>
