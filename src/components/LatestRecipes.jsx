@@ -34,16 +34,16 @@ const LatestRecipes = () => {
         <Spinner />
       ) : (
         <div className='flex flex-col items-center md:justify-items-center md:grid md:grid-cols-3 gap-20'>
-          {recipes.map((recipes, index) => (
+          {recipes.map((recipe, index) => (
             <div
               key={index}
               className='rounded-lg cursor-pointer hover:shadow-lg transition-shadow duration-300 w-[350px] border border-gray-200 pb-2'
-              onClick={() => navigate(`/recipe/${recipes.id}`)}
+              onClick={() => navigate(`/recipe/${recipe.name}`)}
             >
               {/* recipe image */}
               <img
-                src={recipes.image}
-                alt={recipes.title}
+                src={recipe.image}
+                alt={recipe.title}
                 className='w-full h-40 object-cover rounded-t-lg'
               />
               {/* Vegies component */}
@@ -51,12 +51,12 @@ const LatestRecipes = () => {
               {/* Recipe data */}
               <div className='p-4'>
                 <Vegies />
-                <h2 className='text-xl font-semibold mt-3'>{recipes.name}</h2>
-                <p className='text-gray-600 mt-1'>By {recipes.chef}</p>
+                <h2 className='text-xl font-semibold mt-3'>{recipe.name}</h2>
+                <p className='text-gray-600 mt-1'>By {recipe.chef}</p>
 
                 <div className='flex justify-between items-center mt-1'>
                   <span className='text-gray-500 text-sm'>
-                    <GoClock className='inline-block' /> {recipes.minutes}{' '}
+                    <GoClock className='inline-block' /> {recipe.minutes}{' '}
                     minutes
                   </span>
                   <span>
