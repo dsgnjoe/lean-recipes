@@ -1,7 +1,7 @@
 import { useState } from 'react'
 import { useEffect } from 'react'
 import { useNavigate } from 'react-router-dom'
-import data from '../data.json'
+
 import Spinner from './Spinner'
 import { GoClock } from 'react-icons/go'
 import { IoBookmarkOutline } from 'react-icons/io5'
@@ -14,11 +14,17 @@ const LatestRecipes = () => {
   const navigate = useNavigate()
 
   useEffect(() => {
-    setRecipes(latestRecipe)
-    setLoading(false)
+    fetch('/latestRecipe.json')
+      .then((res) => res.json())
+      .then((data) => {
+        setRecipes(data)
+        setLoading(false)
+      })
+      .catch((error) => {
+        console.log('error fetching data', error)
+        setLoading(false)
+      })
   }, [])
-
-  console.log(data)
 
   return (
     <div className='bg-white w-full px-3 md:px-20 py-10 md:py-20'>
