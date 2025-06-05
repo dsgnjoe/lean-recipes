@@ -75,6 +75,12 @@ const SingleRecipe = () => {
                 )
             )}
           </div>
+
+          {/* About Recipe */}
+          <div className='p-2'>
+            <h1 className='text-2xl font-semibold py-3'> About The Recipe</h1>
+            <p className='font-thin'>{recipe.about}</p>
+          </div>
         </div>
       ) : (
         <h1>No Recipe Found</h1>

@@ -11,7 +11,7 @@
     "mainImg": "/images/main.png",
     "chefImg": "/images/chefImg.png",
     "date": "1st May, 2025",
-    "about": "A deliciously creamy avocado pasta that is both healthy and easy to prepare.",
+    "about": "This creamy avocado pasta is a nutritious twist on a classic comfort dish. Made with ripe avocados, garlic, and lemon juice, it delivers a rich, velvety sauce without any cream. It’s quick to prepare and perfect for weeknight dinners. Serve it fresh for the best flavor and texture.",
     "ingredient": [
       "2 ripe avocados",
       "250g pasta",
@@ -36,7 +36,7 @@
     "badge": "vegetarian",
     "image": "/images/latestRcp.png",
     "date": "2025-05-03",
-    "about": "A classic West African dish made with rice, tomatoes, and spices.",
+    "about": "Spicy Jollof Rice is a West African classic packed with flavor. It features long grain rice simmered in a rich tomato and pepper blend with warm spices. This one-pot dish is both comforting and satisfying. It’s perfect for gatherings or a hearty family dinner.",
     "ingredient": [
       "2 cups long grain rice",
       "1 cup tomato puree",
@@ -62,7 +62,7 @@
     "badge": "vegetarian",
     "image": "/images/latestRcp.png",
     "date": "2025-05-04",
-    "about": "A fresh and vibrant salad featuring grilled ripe plantains.",
+    "about": "This salad combines the sweetness of grilled ripe plantains with the crispness of fresh vegetables. It's a light yet filling dish perfect for lunch or a healthy dinner. A drizzle of olive oil and seasoning brings the flavors together. Great as a standalone meal or a colorful side.",
     "ingredient": [
       "2 ripe plantains",
       "1 cucumber",
@@ -88,7 +88,7 @@
     "badge": "vegetarian",
     "image": "/images/latestRcp.png",
     "date": "2025-05-05",
-    "about": "A refreshing tropical smoothie made with mango and coconut milk.",
+    "about": "Cool down with this refreshing tropical smoothie made from ripe mangoes and creamy coconut milk. It’s a quick and delicious way to start your day or recharge in the afternoon. Naturally sweet and packed with vitamins, this smoothie is both healthy and satisfying. Add honey for an extra touch of sweetness.",
     "ingredient": [
       "1 ripe mango",
       "1 cup coconut milk",
@@ -112,7 +112,7 @@
     "badge": "vegetarian",
     "image": "/images/latestRcp.png",
     "date": "2025-05-06",
-    "about": "A warm and comforting soup with the zing of fresh ginger.",
+    "about": "This warm, comforting soup blends the sweetness of carrots with the zing of fresh ginger. It’s smooth, nourishing, and perfect for chilly evenings or as a light lunch. The flavors deepen as it simmers, creating a fragrant and satisfying bowl. Serve hot with crusty bread or on its own.",
     "ingredient": [
       "4 large carrots",
       "1 onion",
@@ -137,7 +137,7 @@
     "badge": "vegetarian",
     "image": "/images/latestRcp.png",
     "date": "2025-05-07",
-    "about": "A protein-rich fried rice dish with crispy tofu pieces.",
+    "about": "This dish gives classic fried rice a protein boost with crispy tofu cubes. It’s packed with colorful vegetables and bold, savory flavors. Simple to prepare and incredibly satisfying, it makes a great weeknight meal. A touch of soy sauce ties everything together beautifully.",
     "ingredient": [
       "2 cups cooked rice",
       "200g firm tofu",
@@ -163,7 +163,7 @@
     "badge": "vegetarian",
     "image": "/images/latestRcp.png",
     "date": "2025-05-08",
-    "about": "A hearty Ghanaian okra stew rich in flavor and nutrition.",
+    "about": "Okra Stew Delight is a hearty Ghanaian stew rich in texture and flavor. Made with fresh okra, onions, and peppers, it's a staple comfort dish in many homes. The natural thickness from the okra makes it deeply satisfying. Serve it with rice, banku, or your favorite starch.",
     "ingredient": [
       "2 cups chopped okra",
       "1 onion",
@@ -188,7 +188,7 @@
     "badge": "vegetarian",
     "image": "/images/latestRcp.png",
     "date": "2025-05-09",
-    "about": "A colorful and healthy fruit bowl made with fresh papaya and seasonal fruits.",
+    "about": "This vibrant fruit bowl is packed with nutrients and refreshing flavor. Featuring papaya, banana, and grapes, it's both energizing and delicious. Topped with chia seeds and optional yogurt, it’s a perfect breakfast or snack. Colorful, wholesome, and ready in minutes.",
     "ingredient": [
       "1 papaya",
       "1 banana",
@@ -212,7 +212,7 @@
     "badge": "vegetarian",
     "image": "/images/latestRcp.png",
     "date": "2025-05-10",
-    "about": "A rich and creamy bean curry simmered in coconut milk and spices.",
+    "about": "This coconut bean curry is rich, creamy, and full of comforting spices. It combines hearty beans with coconut milk for a smooth, flavorful sauce. The blend of garlic, ginger, and curry powder creates a bold aroma. Best served warm with rice or flatbread.",
     "ingredient": [
       "2 cups cooked beans",
       "1 cup coconut milk",
