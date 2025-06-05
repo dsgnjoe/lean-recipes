@@ -85,10 +85,15 @@ const SingleRecipe = () => {
           </div>
 
           {/* Ingredient and Method */}
-          <div>
+          <div className='bg-heroGreenLight p-3'>
             {/* ingredient */}
             <div>
-              <h3 className='font-leagueGothic text-3xl'>Ingredients</h3>
+              <h3 className='font-league text-3xl'>Ingredients</h3>
+              <div className='flex flex-col p-2 bg-white gap-3 underline underline-offset-8'>
+                {recipe.ingredient.map((item, index) => (
+                  <ul key={index}>{item}</ul>
+                ))}
+              </div>
             </div>
           </div>
         </>
