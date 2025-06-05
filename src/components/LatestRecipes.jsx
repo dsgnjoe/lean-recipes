@@ -1,7 +1,6 @@
 import { useState } from 'react'
 import { useEffect } from 'react'
 import { useNavigate } from 'react-router-dom'
-
 import Spinner from './Spinner'
 import { GoClock } from 'react-icons/go'
 import { IoBookmarkOutline } from 'react-icons/io5'
