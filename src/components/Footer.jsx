@@ -1,7 +1,7 @@
 import { FiSearch } from 'react-icons/fi'
 import { IoArrowForwardCircleOutline } from 'react-icons/io5'
 import { Link } from 'react-router-dom'
-import Logo from '/logo.png'
+import Logo from '/images/logo.png'
 import { FaFacebook } from 'react-icons/fa'
 import { BsTwitterX } from 'react-icons/bs'
 import { FaInstagram } from 'react-icons/fa'

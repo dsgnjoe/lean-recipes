@@ -13,7 +13,7 @@ const LatestRecipes = () => {
   const navigate = useNavigate()
 
   useEffect(() => {
-    fetch('/latestRecipe.json')
+    fetch('/LatestRecipe.json')
       .then((res) => res.json())
       .then((data) => {
         setRecipes(data)

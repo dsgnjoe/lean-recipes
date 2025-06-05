@@ -18,7 +18,7 @@ const Login = ({ switchToSignUp }) => {
   return (
     <div className='bg-white font-hostGrotesk rounded-lg mx-3 p-3 py-5'>
       <header className='flex flex-col items-center gap-3'>
-        <img src='/logo.png' alt='sign up logo' width={50} />
+        <img src='images/logo.png' alt='sign up logo' width={50} />
         <h1 className='font-hostGrotesk font-bold text-3xl'>Sign In</h1>
       </header>
       <form className='flex flex-col gap-5 py-5'>

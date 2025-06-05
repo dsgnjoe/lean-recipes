@@ -5,7 +5,7 @@ import About from './pages/About'
 import Contact from './pages/Contact'
 import Recipes from './pages/Recipes'
 import Categories from './pages/Categories'
-import Details from './pages/Details'
+import SingleRecipe from './pages/SingleRecipe'
 
 function App() {
   return (
@@ -18,7 +18,7 @@ function App() {
             <Route path='/contact' element={<Contact />} />
             <Route path='/recipes' element={<Recipes />} />
             <Route path='/categories' element={<Categories />} />
-            <Route path='/recipe/:recipeId' element={<Details />} />
+            <Route path='/recipe/:name' element={<SingleRecipe />} />
           </Route>
         </Routes>
       </Router>

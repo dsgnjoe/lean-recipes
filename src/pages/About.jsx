@@ -21,7 +21,7 @@ const About = () => {
               difficulty, or cook time.
             </p>
           </div>
-          <img src='/img1.png' alt='image' />
+          <img src='/images/img1.png' alt='image' />
         </div>
 
         <div className='md:flex md:flex-row-reverse md:gap-14 md:mt-10'>
@@ -34,7 +34,7 @@ const About = () => {
               measurement and estimated cooking time.
             </p>
           </div>
-          <img src='/img2.png' alt='image' className='md:w-1/2' />
+          <img src='/images/img2.png' alt='image' className='md:w-1/2' />
         </div>
 
         <div className='md:flex md:gap-10 md:mt-10'>
@@ -46,7 +46,7 @@ const About = () => {
               Create your own recipe and store them in your organized categories
             </p>
           </div>
-          <img src='/img3.png' alt='image' className='md:w-1/2' />
+          <img src='/images/img3.png' alt='image' className='md:w-1/2' />
         </div>
       </section>
     </div>

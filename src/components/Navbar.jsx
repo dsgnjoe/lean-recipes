@@ -1,5 +1,5 @@
 import { Link } from 'react-router-dom'
-import Logo from '/logo.png'
+import Logo from '/images/logo.png'
 import { FiSearch } from 'react-icons/fi'
 import { HiMiniBars3BottomRight } from 'react-icons/hi2'
 import { IoCloseSharp } from 'react-icons/io5'

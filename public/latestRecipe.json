@@ -6,7 +6,7 @@
     "prepTime": 10,
     "totalMinutes": 35,
     "badge": "vegetarian",
-    "image": "/latestRcp.png",
+    "image": "/images/latestRcp.png",
     "date": "2025-05-01",
     "about": "A deliciously creamy avocado pasta that is both healthy and easy to prepare.",
     "ingredient": [
@@ -31,7 +31,7 @@
     "prepTime": 15,
     "totalMinutes": 60,
     "badge": "vegetarian",
-    "image": "/latestRcp.png",
+    "image": "/images/latestRcp.png",
     "date": "2025-05-03",
     "about": "A classic West African dish made with rice, tomatoes, and spices.",
     "ingredient": [
@@ -57,7 +57,7 @@
     "prepTime": 10,
     "totalMinutes": 30,
     "badge": "vegetarian",
-    "image": "/latestRcp.png",
+    "image": "/images/latestRcp.png",
     "date": "2025-05-04",
     "about": "A fresh and vibrant salad featuring grilled ripe plantains.",
     "ingredient": [
@@ -83,7 +83,7 @@
     "prepTime": 5,
     "totalMinutes": 15,
     "badge": "vegetarian",
-    "image": "/latestRcp.png",
+    "image": "/images/latestRcp.png",
     "date": "2025-05-05",
     "about": "A refreshing tropical smoothie made with mango and coconut milk.",
     "ingredient": [
@@ -107,7 +107,7 @@
     "prepTime": 10,
     "totalMinutes": 40,
     "badge": "vegetarian",
-    "image": "/latestRcp.png",
+    "image": "/images/latestRcp.png",
     "date": "2025-05-06",
     "about": "A warm and comforting soup with the zing of fresh ginger.",
     "ingredient": [
@@ -132,7 +132,7 @@
     "prepTime": 15,
     "totalMinutes": 50,
     "badge": "vegetarian",
-    "image": "/latestRcp.png",
+    "image": "/images/latestRcp.png",
     "date": "2025-05-07",
     "about": "A protein-rich fried rice dish with crispy tofu pieces.",
     "ingredient": [
@@ -158,7 +158,7 @@
     "prepTime": 20,
     "totalMinutes": 60,
     "badge": "vegetarian",
-    "image": "/latestRcp.png",
+    "image": "/images/latestRcp.png",
     "date": "2025-05-08",
     "about": "A hearty Ghanaian okra stew rich in flavor and nutrition.",
     "ingredient": [
@@ -183,7 +183,7 @@
     "prepTime": 5,
     "totalMinutes": 20,
     "badge": "vegetarian",
-    "image": "/latestRcp.png",
+    "image": "/images/latestRcp.png",
     "date": "2025-05-09",
     "about": "A colorful and healthy fruit bowl made with fresh papaya and seasonal fruits.",
     "ingredient": [
@@ -207,7 +207,7 @@
     "prepTime": 20,
     "totalMinutes": 70,
     "badge": "vegetarian",
-    "image": "/latestRcp.png",
+    "image": "/images/latestRcp.png",
     "date": "2025-05-10",
     "about": "A rich and creamy bean curry simmered in coconut milk and spices.",
     "ingredient": [
