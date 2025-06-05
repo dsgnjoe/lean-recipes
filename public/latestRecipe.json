@@ -2,12 +2,15 @@
   {
     "name": "Creamy Avocado Pasta",
     "chef": "Chef Ama",
-    "minutes": 25,
+    "cookTime": 25,
     "prepTime": 10,
+    "serveTime": 5,
     "totalMinutes": 35,
     "badge": "vegetarian",
     "image": "/images/latestRcp.png",
-    "date": "2025-05-01",
+    "mainImg": "/images/main.png",
+    "chefImg": "/images/chefImg.png",
+    "date": "1st May, 2025",
     "about": "A deliciously creamy avocado pasta that is both healthy and easy to prepare.",
     "ingredient": [
       "2 ripe avocados",
@@ -27,7 +30,7 @@
   {
     "name": "Spicy Jollof Rice",
     "chef": "Chef Kwame",
-    "minutes": 45,
+    "cookTime": 45,
     "prepTime": 15,
     "totalMinutes": 60,
     "badge": "vegetarian",
@@ -53,7 +56,7 @@
   {
     "name": "Grilled Plantain Salad",
     "chef": "Chef Esi",
-    "minutes": 20,
+    "cookTime": 20,
     "prepTime": 10,
     "totalMinutes": 30,
     "badge": "vegetarian",
@@ -79,7 +82,7 @@
   {
     "name": "Mango Coconut Smoothie",
     "chef": "Chef Kojo",
-    "minutes": 10,
+    "cookTime": 10,
     "prepTime": 5,
     "totalMinutes": 15,
     "badge": "vegetarian",
@@ -103,7 +106,7 @@
   {
     "name": "Ginger Carrot Soup",
     "chef": "Chef Abena",
-    "minutes": 30,
+    "cookTime": 30,
     "prepTime": 10,
     "totalMinutes": 40,
     "badge": "vegetarian",
@@ -128,7 +131,7 @@
   {
     "name": "Fried Rice with Tofu",
     "chef": "Chef Nana",
-    "minutes": 35,
+    "cookTime": 35,
     "prepTime": 15,
     "totalMinutes": 50,
     "badge": "vegetarian",
@@ -154,7 +157,7 @@
   {
     "name": "Okra Stew Delight",
     "chef": "Chef Selorm",
-    "minutes": 40,
+    "cookTime": 40,
     "prepTime": 20,
     "totalMinutes": 60,
     "badge": "vegetarian",
@@ -179,7 +182,7 @@
   {
     "name": "Papaya Fruit Bowl",
     "chef": "Chef Adwoa",
-    "minutes": 15,
+    "cookTime": 15,
     "prepTime": 5,
     "totalMinutes": 20,
     "badge": "vegetarian",
@@ -203,7 +206,7 @@
   {
     "name": "Coconut Bean Curry",
     "chef": "Chef Yaw",
-    "minutes": 50,
+    "cookTime": 50,
     "prepTime": 20,
     "totalMinutes": 70,
     "badge": "vegetarian",

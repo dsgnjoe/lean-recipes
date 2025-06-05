@@ -55,7 +55,7 @@ const LatestRecipes = () => {
 
                 <div className='flex justify-between items-center mt-1'>
                   <span className='text-gray-500 text-sm'>
-                    <GoClock className='inline-block' /> {recipe.minutes}{' '}
+                    <GoClock className='inline-block' /> {recipe.cookTime}{' '}
                     minutes
                   </span>
                   <span>
