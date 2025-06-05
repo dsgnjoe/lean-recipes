@@ -30,58 +30,68 @@ const SingleRecipe = () => {
       {loading ? (
         <Spinner />
       ) : recipe ? (
-        <div className='p-3'>
-          {/* Recipe name and image */}
-          <img src={recipe.mainImg} alt={recipe.name} />
-          <h2 className='text-center font-semibold text-4xl py-5'>
-            {recipe.name}
-          </h2>
+        <>
+          <div className='p-3'>
+            {/* Recipe name and image */}
+            <img src={recipe.mainImg} alt={recipe.name} />
+            <h2 className='text-center font-semibold text-4xl py-5'>
+              {recipe.name}
+            </h2>
 
-          {/* Recipe owner */}
-          <div className='flex items-center justify-between'>
-            <div className='flex items-center gap-3 px-2'>
-              <img src={recipe.chefImg} alt={recipe.chef} className='w-10' />
-              <div>
-                <h4>{recipe.chef}</h4>
-                <h5 className='text-sm font-light text-gray-400'>
-                  {recipe.date}
-                </h5>
+            {/* Recipe owner */}
+            <div className='flex items-center justify-between'>
+              <div className='flex items-center gap-3 px-2'>
+                <img src={recipe.chefImg} alt={recipe.chef} className='w-10' />
+                <div>
+                  <h4>{recipe.chef}</h4>
+                  <h5 className='text-sm font-light text-gray-400'>
+                    {recipe.date}
+                  </h5>
+                </div>
               </div>
+
+              {/* vegetarian badge */}
+              <span className='flex items-center gap-3'>
+                <Vegies />
+                <IoBookmarkOutline className='font-bold text-xl' />
+              </span>
             </div>
 
-            {/* vegetarian badge */}
-            <span className='flex items-center gap-3'>
-              <Vegies />
-              <IoBookmarkOutline className='font-bold text-xl' />
-            </span>
+            {/* Prep, cook an total Time */}
+            <div className='grid grid-cols-2 py-4 justify-items-center text-center gap-5'>
+              {['prepTime', 'cookTime', 'serveTime', 'totalMinutes'].map(
+                (key) =>
+                  recipe[key] && (
+                    <React.Fragment key={key}>
+                      <span className='bg-gray-200 p-3 rounded-md  w-2/3'>
+                        {key
+                          .replace(/([A-Z])/g, ' $1') // add space before capital letters
+                          .replace(/^./, (str) => str.toUpperCase())}
+                        {/* capitalize first letter */}
+                        <h4 className='bg-white rounded p-1 mx-4  text-sm'>
+                          {recipe[key]} mins
+                        </h4>
+                      </span>
+                    </React.Fragment>
+                  )
+              )}
+            </div>
+
+            {/* About Recipe */}
+            <div className='p-2'>
+              <h1 className='text-2xl font-semibold py-3'> About The Recipe</h1>
+              <p className='font-thin'>{recipe.about}</p>
+            </div>
           </div>
 
-          {/* Prep, cook an total Time */}
-          <div className='grid grid-cols-2 py-4 justify-items-center text-center gap-5'>
-            {['prepTime', 'cookTime', 'serveTime', 'totalMinutes'].map(
-              (key) =>
-                recipe[key] && (
-                  <React.Fragment key={key}>
-                    <span className='bg-gray-200 p-3 rounded-md  w-2/3'>
-                      {key
-                        .replace(/([A-Z])/g, ' $1') // add space before capital letters
-                        .replace(/^./, (str) => str.toUpperCase())}
-                      {/* capitalize first letter */}
-                      <h4 className='bg-white rounded p-1 mx-4  text-sm'>
-                        {recipe[key]} mins
-                      </h4>
-                    </span>
-                  </React.Fragment>
-                )
-            )}
+          {/* Ingredient and Method */}
+          <div>
+            {/* ingredient */}
+            <div>
+              <h3 className='font-leagueGothic text-3xl'>Ingredients</h3>
+            </div>
           </div>
-
-          {/* About Recipe */}
-          <div className='p-2'>
-            <h1 className='text-2xl font-semibold py-3'> About The Recipe</h1>
-            <p className='font-thin'>{recipe.about}</p>
-          </div>
-        </div>
+        </>
       ) : (
         <h1>No Recipe Found</h1>
       )}

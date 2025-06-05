@@ -12,6 +12,7 @@ export default {
       fontFamily: {
         hostGrotesk: ['Host Grotesk', 'sans-serif'],
         outfit: ['Outfit', 'sans-serif'],
+        leagueGothic: ['leagueGothic', 'sans-serif'],
       },
     },
   },
