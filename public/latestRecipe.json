@@ -36,7 +36,9 @@
     "prepTime": 15,
     "totalMinutes": 60,
     "badge": "vegetarian",
-    "image": "/images/latestRcp.png",
+    "image": "/images/jollof.png",
+    "mainImg": "/images/jollof.png",
+    "chefImg": "/images/chefKwame.png",
     "date": "2025-05-03",
     "about": "Spicy Jollof Rice is a West African classic packed with flavor. It features long grain rice simmered in a rich tomato and pepper blend with warm spices. This one-pot dish is both comforting and satisfying. It’s perfect for gatherings or a hearty family dinner.",
     "ingredient": [

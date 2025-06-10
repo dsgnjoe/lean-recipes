@@ -31,12 +31,12 @@ const SingleRecipe = () => {
         <Spinner />
       ) : recipe ? (
         <>
-          <div className='p-3 md:flex md:gap-10 md:px-20'>
+          <div className='p-3 md:flex md:gap-10 md:px-20 md:py-5'>
             {/* Recipe image */}
             <img
               src={recipe.mainImg}
               alt={recipe.name}
-              className='md:w-[45%] md:p-5'
+              className='rounded-lg md:w-[45%] md:p-5'
             />
 
             <div className='md:px-10'>
@@ -51,7 +51,7 @@ const SingleRecipe = () => {
                   <img
                     src={recipe.chefImg}
                     alt={recipe.chef}
-                    className='w-10'
+                    className='w-10 rounded-full'
                   />
                   <div>
                     <h4>{recipe.chef}</h4>
