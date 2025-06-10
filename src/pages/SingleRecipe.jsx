@@ -87,23 +87,31 @@ const SingleRecipe = () => {
           {/* Ingredient and Method */}
           <div className='bg-heroGreenLight p-3 py-5'>
             {/* ingredient */}
-            <div>
-              <h3 className='font-league text-3xl'>Ingredients</h3>
-              <div className='flex flex-col p-2 bg-white my-5'>
-                {recipe.ingredient.map((item, index) => (
-                  <ul
-                    key={index}
-                    className={`py-2 px-3 text-gray-500 ${
-                      index !== recipe.ingredient.length - 1
-                        ? 'border-b border-gray-300'
-                        : ''
-                    }`}
-                  >
-                    {item}
-                  </ul>
-                ))}
-              </div>
+            <h3 className='font-league text-3xl'>Ingredients</h3>
+            <div className='flex flex-col p-2 bg-white my-5'>
+              {recipe.ingredient.map((item, index) => (
+                <ul
+                  key={index}
+                  className={`py-2 px-3 text-gray-500 ${
+                    index !== recipe.ingredient.length - 1
+                      ? 'border-b border-gray-300'
+                      : ''
+                  }`}
+                >
+                  {item}
+                </ul>
+              ))}
             </div>
+
+            {/* methods */}
+            <h3 className='font-league text-3xl'>Methods</h3>
+            <ol className='flex flex-col list-decimal my-5 px-5'>
+              {recipe.method.map((item, index) => (
+                <li key={index} className='py-2 '>
+                  {item}
+                </li>
+              ))}
+            </ol>
           </div>
         </>
       ) : (
