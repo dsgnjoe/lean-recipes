@@ -7,20 +7,25 @@ import React from 'react'
 
 const SingleRecipe = () => {
   const [loading, setLoading] = useState(true)
-  const [recipe, setRecipe] = useState([])
+  const [recipe, setRecipe] = useState([null])
 
   const { name } = useParams()
 
   useEffect(() => {
-    fetch('/latestRecipe.json')
-      .then((res) => res.json())
+    fetch('/LatestRecipe.json')
+      .then((res) => {
+        if (!res.ok) {
+          throw new Error(`HTTP error! ${res.status}`)
+        }
+        return res.json()
+      })
       .then((data) => {
         const foundRecipe = data.find((item) => item.name === name)
         setRecipe(foundRecipe)
         setLoading(false)
       })
       .catch((error) => {
-        console.log('error fetching recipe', error)
+        console.log('Error Fetching Recipe', error)
         setLoading(false)
       })
   }, [name])
@@ -105,7 +110,7 @@ const SingleRecipe = () => {
             <div className='md:w-full'>
               <h3 className='font-league text-3xl'>Ingredients</h3>
               <div className='flex flex-col p-2 bg-white my-5'>
-                {recipe.ingredient.map((item, index) => (
+                {recipe.ingredient?.map((item, index) => (
                   <ul
                     key={index}
                     className={`py-2 px-3 text-gray-500 ${
@@ -124,7 +129,7 @@ const SingleRecipe = () => {
             <div className='md:w-full'>
               <h3 className='font-league text-3xl'>Methods</h3>
               <ol className='flex flex-col list-decimal my-5 px-5'>
-                {recipe.method.map((item, index) => (
+                {recipe.method?.map((item, index) => (
                   <li key={index} className='py-2 '>
                     {item}
                   </li>
