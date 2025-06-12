@@ -24,9 +24,9 @@ const AddRecipe = () => {
   }
   return (
     <div className='font-hostGrotesk bg-white p-3 py-10'>
-      <header className='font-bold'>Recipe Information</header>
+      <header className='font-bold text-2xl'>Recipe Information</header>
 
-      <div className=''>
+      <div className='bg-white shadow-md p-2 rounded-lg'>
         {/* upload image */}
         <div>
           <input
@@ -54,8 +54,53 @@ const AddRecipe = () => {
           </p>
         </div>
 
-        {/* ingredient */}
-        <div></div>
+        {/* recipe details */}
+        <div className='flex flex-col gap-3 py-4'>
+          <div className='flex flex-col'>
+            <label htmlFor='name' className='text-2xl'>
+              Recipe Title
+            </label>
+            <input
+              type='text'
+              name='name'
+              value={name}
+              onChange={onChange}
+              className='border-2 border-gray-300 rounded-md p-2 mt-1'
+              placeholder='Give your recipe a title'
+              required
+            />
+          </div>
+
+          <div className='flex flex-col'>
+            <label htmlFor='description' className='text-2xl'>
+              Description
+            </label>
+            <input
+              type='text'
+              name='description'
+              value={description}
+              onChange={onChange}
+              className='border-2 border-gray-300 rounded-md p-2 mt-1'
+              placeholder='Write about your recipe'
+              required
+            />
+          </div>
+
+          <div className='flex flex-col'>
+            <label htmlFor='description' className='text-2xl'>
+              Serves
+            </label>
+            <input
+              type='number'
+              name='serves'
+              value={serves}
+              onChange={onChange}
+              className='border-2 border-gray-300 rounded-md p-2 mt-1'
+              placeholder='Feeds up to?'
+              required
+            />
+          </div>
+        </div>
       </div>
     </div>
   )

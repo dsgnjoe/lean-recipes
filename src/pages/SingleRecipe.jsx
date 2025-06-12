@@ -114,7 +114,7 @@ const SingleRecipe = () => {
                   <ul
                     key={index}
                     className={`py-2 px-3 text-gray-500 ${
-                      index !== recipe.ingredient.length - 1
+                      index !== recipe.ingredients.length - 1
                         ? 'border-b border-gray-300'
                         : ''
                     }`}
