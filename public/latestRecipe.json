@@ -4,7 +4,7 @@
     "chef": "Chef Ama",
     "cookTime": 25,
     "prepTime": 10,
-    "serveTime": 5,
+    "serves": 5,
     "totalMinutes": 35,
     "badge": "vegetarian",
     "image": "/images/latestRcp.png",
@@ -12,7 +12,7 @@
     "chefImg": "/images/chefs/chefImg.png",
     "date": "1st May, 2025",
     "about": "This creamy avocado pasta is a nutritious twist on a classic comfort dish. Made with ripe avocados, garlic, and lemon juice, it delivers a rich, velvety sauce without any cream. It’s quick to prepare and perfect for weeknight dinners. Serve it fresh for the best flavor and texture.",
-    "ingredient": [
+    "ingredients": [
       "2 ripe avocados",
       "250g pasta",
       "1 clove garlic",
@@ -41,7 +41,7 @@
     "chefImg": "/images/chefs/chefKwame.png",
     "date": "2025-05-03",
     "about": "Spicy Jollof Rice is a West African classic packed with flavor. It features long grain rice simmered in a rich tomato and pepper blend with warm spices. This one-pot dish is both comforting and satisfying. It’s perfect for gatherings or a hearty family dinner.",
-    "ingredient": [
+    "ingredients": [
       "2 cups long grain rice",
       "1 cup tomato puree",
       "1 onion",
@@ -71,7 +71,7 @@
     "mainImg": "/images/mdFoods/plantainSalad.png",
     "date": "2025-05-04",
     "about": "This salad combines the sweetness of grilled ripe plantains with the crispness of fresh vegetables. It's a light yet filling dish perfect for lunch or a healthy dinner. A drizzle of olive oil and seasoning brings the flavors together. Great as a standalone meal or a colorful side.",
-    "ingredient": [
+    "ingredients": [
       "2 ripe plantains",
       "1 cucumber",
       "Cherry tomatoes",
@@ -101,7 +101,7 @@
     "mainImg": "/images/mdFoods/mango.png",
     "date": "2025-05-05",
     "about": "Cool down with this refreshing tropical smoothie made from ripe mangoes and creamy coconut milk. It’s a quick and delicious way to start your day or recharge in the afternoon. Naturally sweet and packed with vitamins, this smoothie is both healthy and satisfying. Add honey for an extra touch of sweetness.",
-    "ingredient": [
+    "ingredients": [
       "1 ripe mango",
       "1 cup coconut milk",
       "1 banana",
@@ -128,7 +128,7 @@
     "image": "/images/latestRcp.png",
     "date": "2025-05-06",
     "about": "This warm, comforting soup blends the sweetness of carrots with the zing of fresh ginger. It’s smooth, nourishing, and perfect for chilly evenings or as a light lunch. The flavors deepen as it simmers, creating a fragrant and satisfying bowl. Serve hot with crusty bread or on its own.",
-    "ingredient": [
+    "ingredients": [
       "4 large carrots",
       "1 onion",
       "1 tbsp grated ginger",
@@ -155,7 +155,7 @@
     "image": "/images/latestRcp.png",
     "date": "2025-05-07",
     "about": "This dish gives classic fried rice a protein boost with crispy tofu cubes. It’s packed with colorful vegetables and bold, savory flavors. Simple to prepare and incredibly satisfying, it makes a great weeknight meal. A touch of soy sauce ties everything together beautifully.",
-    "ingredient": [
+    "ingredients": [
       "2 cups cooked rice",
       "200g firm tofu",
       "1 cup mixed vegetables",
@@ -183,7 +183,7 @@
     "image": "/images/latestRcp.png",
     "date": "2025-05-08",
     "about": "Okra Stew Delight is a hearty Ghanaian stew rich in texture and flavor. Made with fresh okra, onions, and peppers, it's a staple comfort dish in many homes. The natural thickness from the okra makes it deeply satisfying. Serve it with rice, banku, or your favorite starch.",
-    "ingredient": [
+    "ingredients": [
       "2 cups chopped okra",
       "1 onion",
       "1 bell pepper",
@@ -210,7 +210,7 @@
     "image": "/images/latestRcp.png",
     "date": "2025-05-09",
     "about": "This vibrant fruit bowl is packed with nutrients and refreshing flavor. Featuring papaya, banana, and grapes, it's both energizing and delicious. Topped with chia seeds and optional yogurt, it’s a perfect breakfast or snack. Colorful, wholesome, and ready in minutes.",
-    "ingredient": [
+    "ingredients": [
       "1 papaya",
       "1 banana",
       "Handful of grapes",
@@ -237,7 +237,7 @@
     "image": "/images/latestRcp.png",
     "date": "2025-05-10",
     "about": "This coconut bean curry is rich, creamy, and full of comforting spices. It combines hearty beans with coconut milk for a smooth, flavorful sauce. The blend of garlic, ginger, and curry powder creates a bold aroma. Best served warm with rice or flatbread.",
-    "ingredient": [
+    "ingredients": [
       "2 cups cooked beans",
       "1 cup coconut milk",
       "1 onion",

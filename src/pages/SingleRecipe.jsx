@@ -75,7 +75,7 @@ const SingleRecipe = () => {
 
               {/* Prep, cook an total Time */}
               <div className='grid grid-cols-2 py-4 justify-items-center text-center gap-5 md:flex'>
-                {['prepTime', 'cookTime', 'serveTime', 'totalMinutes'].map(
+                {['prepTime', 'cookTime', 'serves', 'totalMinutes'].map(
                   (key) =>
                     recipe[key] && (
                       <React.Fragment key={key}>
