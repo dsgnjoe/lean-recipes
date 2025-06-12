@@ -55,7 +55,7 @@ const AddRecipe = () => {
         </div>
 
         {/* recipe details */}
-        <div className='flex flex-col gap-3 py-4'>
+        <div className='flex flex-col gap-4 py-4'>
           <div className='flex flex-col'>
             <label htmlFor='name' className='text-2xl'>
               Recipe Title
@@ -99,6 +99,31 @@ const AddRecipe = () => {
               placeholder='Feeds up to?'
               required
             />
+          </div>
+
+          <div className='flex flex-col'>
+            <label htmlFor='cookTime' className='text-2xl'>
+              Cook Time
+            </label>
+            <div className='flex gap-3 items-center'>
+              <input
+                type='number'
+                name='cookTime'
+                value={cookTime}
+                onChange={onChange}
+                className='border-2 border-gray-300 rounded-md p-2 mt-1 w-12'
+                required
+              />
+              <select
+                name='cookTime'
+                value={cookTime}
+                onChange={onChange}
+                className='border-2 border-gray-300 text-gray-400 rounded-md h-[43px] w-full '
+              >
+                <option value='cookTime'>Minutes</option>
+                <option value='cookTime'>Hours</option>
+              </select>
+            </div>
           </div>
         </div>
       </div>
