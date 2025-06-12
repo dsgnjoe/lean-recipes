@@ -1,4 +1,5 @@
 import { useState, useEffect } from 'react'
+import { FiImage } from 'react-icons/fi'
 
 const AddRecipe = () => {
   const [formData, setFormData] = useState({
@@ -26,9 +27,8 @@ const AddRecipe = () => {
       <header className='font-bold'>Recipe Information</header>
 
       <div className=''>
+        {/* upload image */}
         <div>
-          {/* upload image */}
-
           <input
             type='file'
             accept='image/*'
@@ -38,12 +38,24 @@ const AddRecipe = () => {
           />
           <label
             htmlFor='uploadImg'
-            className='cursor-pointer bg-gray-300 p-4 w-full h-72 my-3 rounded-lg block text-center md:hover:bg-gray-400'
-          ></label>
+            className='cursor-pointer bg-gray-200 p-4 w-full h-72 my-3 rounded-lg block text-center md:hover:bg-gray-300 border-2 border-gray-300'
+          >
+            {image ? (
+              image.name
+            ) : (
+              <p>
+                <FiImage />
+                Click to upload an image
+              </p>
+            )}
+          </label>
           <p className='text-gray-400 font-thin text-sm'>
             Use JPG or PNG. Must be a least 960 x 960. Max file size: 30MB
           </p>
         </div>
+
+        {/* ingredient */}
+        <div></div>
       </div>
     </div>
   )
