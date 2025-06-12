@@ -21,6 +21,13 @@ const AddRecipe = () => {
     directions,
   } = formData
 
+  const onChange = (e) => {
+    const { name, value } = e.target
+    setFormData((prevState) => ({
+      ...prevState,
+      [name]: value,
+    }))
+  }
   return (
     <div className='font-hostGrotesk'>
       <header>Recipe Information</header>
