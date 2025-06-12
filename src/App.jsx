@@ -6,6 +6,7 @@ import Contact from './pages/Contact'
 import Recipes from './pages/Recipes'
 import Categories from './pages/Categories'
 import SingleRecipe from './pages/SingleRecipe'
+import AddRecipe from './pages/AddRecipe'
 
 function App() {
   return (
@@ -19,6 +20,7 @@ function App() {
             <Route path='/recipes' element={<Recipes />} />
             <Route path='/categories' element={<Categories />} />
             <Route path='/recipe/:name' element={<SingleRecipe />} />
+            <Route path='/add-recipe' element={<AddRecipe />} />
           </Route>
         </Routes>
       </Router>
