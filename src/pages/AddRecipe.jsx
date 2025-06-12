@@ -1,5 +1,6 @@
 import { useState, useEffect } from 'react'
 import { FiImage } from 'react-icons/fi'
+import { RiDeleteBin6Line } from 'react-icons/ri'
 
 const AddRecipe = () => {
   const [formData, setFormData] = useState({
@@ -26,107 +27,147 @@ const AddRecipe = () => {
     <div className='font-hostGrotesk bg-white p-3 py-10'>
       <header className='font-bold text-2xl'>Recipe Information</header>
 
-      <div className='bg-white shadow-md p-2 rounded-lg'>
-        {/* upload image */}
-        <div>
-          <input
-            type='file'
-            accept='image/*'
-            id='uploadImg'
-            onChange={onChange}
-            className='hidden'
-          />
-          <label
-            htmlFor='uploadImg'
-            className='cursor-pointer bg-gray-200 p-4 w-full h-72 my-3 rounded-lg block text-center md:hover:bg-gray-300 border-2 border-gray-300'
-          >
-            {image ? (
-              image.name
-            ) : (
-              <p>
-                <FiImage />
-                Click to upload an image
-              </p>
-            )}
-          </label>
-          <p className='text-gray-400 font-thin text-sm'>
-            Use JPG or PNG. Must be a least 960 x 960. Max file size: 30MB
-          </p>
-        </div>
-
-        {/* recipe details */}
-        <div className='flex flex-col gap-4 py-4'>
-          <div className='flex flex-col'>
-            <label htmlFor='name' className='text-2xl'>
-              Recipe Title
-            </label>
+      <form className='flex flex-col gap-5'>
+        <div className='bg-white shadow-md p-2 rounded-lg'>
+          {/* upload image */}
+          <div>
             <input
-              type='text'
-              name='name'
-              value={name}
+              type='file'
+              accept='image/*'
+              id='uploadImg'
               onChange={onChange}
-              className='border-2 border-gray-300 rounded-md p-2 mt-1'
-              placeholder='Give your recipe a title'
-              required
+              className='hidden'
             />
+            <label
+              htmlFor='uploadImg'
+              className='cursor-pointer bg-gray-200 p-4 w-full h-72 my-3 rounded-lg block text-center md:hover:bg-gray-300 border-2 border-gray-300'
+            >
+              {image ? (
+                image.name
+              ) : (
+                <p>
+                  <FiImage />
+                  Click to upload an image
+                </p>
+              )}
+            </label>
+            <p className='text-gray-400 font-thin text-sm'>
+              Use JPG or PNG. Must be a least 960 x 960. Max file size: 30MB
+            </p>
           </div>
 
-          <div className='flex flex-col'>
-            <label htmlFor='description' className='text-2xl'>
-              Description
-            </label>
-            <input
-              type='text'
-              name='description'
-              value={description}
-              onChange={onChange}
-              className='border-2 border-gray-300 rounded-md p-2 mt-1'
-              placeholder='Write about your recipe'
-              required
-            />
-          </div>
-
-          <div className='flex flex-col'>
-            <label htmlFor='description' className='text-2xl'>
-              Serves
-            </label>
-            <input
-              type='number'
-              name='serves'
-              value={serves}
-              onChange={onChange}
-              className='border-2 border-gray-300 rounded-md p-2 mt-1'
-              placeholder='Feeds up to?'
-              required
-            />
-          </div>
-
-          <div className='flex flex-col'>
-            <label htmlFor='cookTime' className='text-2xl'>
-              Cook Time
-            </label>
-            <div className='flex gap-3 items-center'>
+          {/* recipe details */}
+          <div className='flex flex-col gap-5 py-4'>
+            <div className='flex flex-col'>
+              <label htmlFor='name' className='text-2xl'>
+                Recipe Title
+              </label>
               <input
-                type='number'
-                name='cookTime'
-                value={cookTime}
+                type='text'
+                name='name'
+                value={name}
                 onChange={onChange}
-                className='border-2 border-gray-300 rounded-md p-2 mt-1 w-12'
+                className='border-2 border-gray-300 rounded-md p-2 mt-1'
+                placeholder='Give your recipe a title'
                 required
               />
-              <select
-                name='cookTime'
-                value={cookTime}
+            </div>
+
+            <div className='flex flex-col'>
+              <label htmlFor='description' className='text-2xl'>
+                Description
+              </label>
+              <input
+                type='text'
+                name='description'
+                value={description}
                 onChange={onChange}
-                className='border-2 border-gray-300 text-gray-400 rounded-md h-[43px] w-full '
-              >
-                <option value='cookTime'>Minutes</option>
-                <option value='cookTime'>Hours</option>
-              </select>
+                className='border-2 border-gray-300 rounded-md p-2 mt-1'
+                placeholder='Write about your recipe'
+                required
+              />
+            </div>
+
+            <div className='flex flex-col'>
+              <label htmlFor='description' className='text-2xl'>
+                Serves
+              </label>
+              <input
+                type='number'
+                name='serves'
+                value={serves}
+                onChange={onChange}
+                className='border-2 border-gray-300 rounded-md p-2 mt-1'
+                placeholder='Feeds up to?'
+                required
+              />
+            </div>
+
+            <div className='flex flex-col'>
+              <label htmlFor='cookTime' className='text-2xl'>
+                Cook Time
+              </label>
+              <div className='flex gap-3 items-center'>
+                <input
+                  type='number'
+                  name='cookTime'
+                  value={cookTime}
+                  onChange={onChange}
+                  className='border-2 border-gray-300 rounded-md p-2 mt-1 w-12'
+                  required
+                />
+                <select
+                  name='cookTime'
+                  value={cookTime}
+                  onChange={onChange}
+                  className='border-2 border-gray-300 text-gray-400 rounded-md h-[43px] w-full '
+                >
+                  <option value={cookTime}>Minutes</option>
+                  <option value={cookTime}>Hours</option>
+                </select>
+              </div>
             </div>
           </div>
         </div>
-      </div>
+
+        <div className='bg-white shadow-md p-2 rounded-lg'>
+          <div className='flex flex-col py-4'>
+            <label htmlFor='indredients' className='text-2xl'>
+              Ingredients
+            </label>
+            <div className='flex flex-col gap-2'>
+              <input
+                type='text'
+                name='ingredients'
+                value={ingredients}
+                onChange={onChange}
+                className='border-2 border-gray-300 rounded-md p-2 mt-1'
+                placeholder='Add ingredient'
+                required
+              />
+              <input
+                type='text'
+                name='ingredients'
+                value={ingredients}
+                onChange={onChange}
+                className='border-2 border-gray-300 rounded-md p-2 mt-1'
+                placeholder='Add another ingredient'
+                required
+              />
+              <input
+                type='text'
+                name='ingredients'
+                value={ingredients}
+                onChange={onChange}
+                className='border-2 border-gray-300 rounded-md p-2 mt-1'
+                placeholder='Add another ingredient'
+                required
+              />
+              <RiDeleteBin6Line />
+            </div>
+          </div>
+        </div>
+      </form>
     </div>
   )
 }
