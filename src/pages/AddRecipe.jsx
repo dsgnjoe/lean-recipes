@@ -88,15 +88,15 @@ const AddRecipe = () => {
             />
             <label
               htmlFor='uploadImg'
-              className='cursor-pointer bg-gray-200 p-4 w-full h-72 my-3 rounded-lg block text-center md:hover:bg-gray-300 border-2 border-gray-300'
+              className='cursor-pointer bg-gray-200 p-4 w-full h-72 my-3 rounded-lg text-center md:hover:bg-gray-300 border-2 border-gray-300 flex flex-col justify-center items-center '
             >
               {image ? (
                 image.name
               ) : (
-                <p>
-                  <FiImage />
-                  Click to upload an image
-                </p>
+                <>
+                  <FiImage className='text-3xl' />
+                  <p>Click to upload an image</p>
+                </>
               )}
             </label>
             <p className='text-gray-400 font-thin text-sm'>
