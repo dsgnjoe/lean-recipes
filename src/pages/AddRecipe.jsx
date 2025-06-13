@@ -40,6 +40,8 @@ const AddRecipe = () => {
     }
   }
 
+  const onSubmit = ''
+
   const onIngredientChange = (index, value) => {
     const updated = [...formData.ingredients]
     updated[index] = value
@@ -72,11 +74,11 @@ const AddRecipe = () => {
   }
 
   return (
-    <div className='font-hostGrotesk bg-white p-3 py-10'>
+    <div className='font-hostGrotesk bg-gray-50 p-3 py-10 md:px-24'>
       <header className='font-bold text-2xl'>Recipe Information</header>
 
-      <form className='flex flex-col gap-5'>
-        <div className='bg-white shadow-md p-2 rounded-lg'>
+      <form className='flex flex-col md:flex-row md:w-full md:gap-20 gap-5'>
+        <div className='bg-white shadow-md p-3 md:w-1/2 rounded-lg'>
           {/* upload image */}
           <div>
             <input
@@ -88,7 +90,7 @@ const AddRecipe = () => {
             />
             <label
               htmlFor='uploadImg'
-              className='cursor-pointer bg-gray-200 p-4 w-full h-72 my-3 rounded-lg text-center md:hover:bg-gray-300 border-2 border-gray-300 flex flex-col justify-center items-center '
+              className='cursor-pointer bg-gray-200 p-4 w-full h-72 md:h-80 my-3 rounded-lg text-center md:hover:bg-gray-300 border-2 border-gray-300 flex flex-col justify-center items-center '
             >
               {image ? (
                 image.name
@@ -178,75 +180,79 @@ const AddRecipe = () => {
           </div>
         </div>
 
-        {/* Ingredients */}
-        <div className='bg-white shadow-md p-2 rounded-lg'>
-          <div className='flex flex-col py-4'>
-            <label className='text-2xl'>Ingredients</label>
-            <div className='flex flex-col gap-2'>
-              {formData.ingredients.map((item, index) => (
-                <span key={index} className='flex items-center gap-2'>
-                  <input
-                    type='text'
-                    name='ingredients'
-                    value={item}
-                    onChange={(e) => onIngredientChange(index, e.target.value)}
-                    className='border-2 border-gray-300 w-full rounded-md p-2 mt-1'
-                    placeholder='Add an ingredient'
-                    required
-                  />
-                  <button
-                    type='button'
-                    className='text-xl text-red-500'
-                    onClick={() => removeField('ingredients', index)}
-                  >
-                    <RiDeleteBin6Line />
-                  </button>
-                </span>
-              ))}
+        <div className='md:w-1/2 flex flex-col gap-5'>
+          {/* Ingredients */}
+          <div className='bg-white shadow-md p-3 rounded-lg'>
+            <div className='flex flex-col py-4'>
+              <label className='text-2xl'>Ingredients</label>
+              <div className='flex flex-col gap-2'>
+                {formData.ingredients.map((item, index) => (
+                  <span key={index} className='flex items-center gap-2'>
+                    <input
+                      type='text'
+                      name='ingredients'
+                      value={item}
+                      onChange={(e) =>
+                        onIngredientChange(index, e.target.value)
+                      }
+                      className='border-2 border-gray-300 w-full rounded-md p-2 mt-1'
+                      placeholder='Add an ingredient'
+                      required
+                    />
+                    <button
+                      type='button'
+                      className='text-xl text-red-500'
+                      onClick={() => removeField('ingredients', index)}
+                    >
+                      <RiDeleteBin6Line />
+                    </button>
+                  </span>
+                ))}
 
-              <button
-                type='button'
-                onClick={() => addfield('ingredients')}
-                className=' p-2 border-2 w-1/3 rounded-lg mt-2'
-              >
-                Add Ingredient
-              </button>
+                <button
+                  type='button'
+                  onClick={() => addfield('ingredients')}
+                  className=' p-2 border-2 w-1/3 rounded-lg mt-2'
+                >
+                  Add Ingredient
+                </button>
+              </div>
             </div>
           </div>
-        </div>
 
-        {/* Methods */}
-        <div className='bg-white shadow-md p-2 rounded-lg'>
-          <div className='flex flex-col py-4'>
-            <label className='text-2xl'>Methods</label>
-            <div className='flex flex-col gap-2'>
-              {formData.method.map((item, index) => (
-                <ol key={index} className='flex items-center gap-2'>
-                  <input
-                    type='text'
-                    name='method'
-                    value={item}
-                    onChange={(e) => onMethodChange(index, e.target.value)}
-                    className='border-2 border-gray-300 w-full rounded-md p-2 mt-1'
-                    placeholder='Add a method'
-                    required
-                  />
-                  <button
-                    type='button'
-                    className='text-xl text-red-500'
-                    onClick={() => removeField('method', index)}
-                  >
-                    <RiDeleteBin6Line />
-                  </button>
-                </ol>
-              ))}
-              <button
-                type='button'
-                onClick={() => addfield('method')}
-                className=' p-2 border-2 w-1/3 rounded-lg mt-2'
-              >
-                Add Method
-              </button>
+          {/* Methods */}
+          <div className='bg-white shadow-md p-3 rounded-lg'>
+            <div className='flex flex-col py-4'>
+              <label className='text-2xl'>Methods</label>
+              <div className='flex flex-col gap-2'>
+                {formData.method.map((item, index) => (
+                  <ol key={index} className='flex items-center gap-2'>
+                    <input
+                      type='text'
+                      name='method'
+                      value={item}
+                      onChange={(e) => onMethodChange(index, e.target.value)}
+                      className='border-2 border-gray-300 w-full rounded-md p-2 mt-1'
+                      placeholder='Add a method'
+                      required
+                    />
+                    <button
+                      type='button'
+                      className='text-xl text-red-500'
+                      onClick={() => removeField('method', index)}
+                    >
+                      <RiDeleteBin6Line />
+                    </button>
+                  </ol>
+                ))}
+                <button
+                  type='button'
+                  onClick={() => addfield('method')}
+                  className=' p-2 border-2 w-1/3 rounded-lg mt-2'
+                >
+                  Add Method
+                </button>
+              </div>
             </div>
           </div>
         </div>
