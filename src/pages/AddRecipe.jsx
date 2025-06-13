@@ -9,19 +9,35 @@ const AddRecipe = () => {
     description: '',
     serves: '',
     cookTime: '',
+    cookUnit: ['minutes', 'hours'],
     ingredients: ['', '', ''],
-    method: [],
+    method: ['', '', ''],
   })
 
-  const { image, name, description, serves, cookTime, ingredients, method } =
-    formData
+  const {
+    image,
+    name,
+    description,
+    serves,
+    cookTime,
+    cookUnit,
+    ingredients,
+    method,
+  } = formData
 
   const onChange = (e) => {
-    const { name, value } = e.target
-    setFormData((prevState) => ({
-      ...prevState,
-      [name]: value,
-    }))
+    const { name, value, files } = e.target
+    if (e.target.type === 'file') {
+      setFormData((prevState) => ({
+        ...prevState,
+        image: files[0],
+      }))
+    } else {
+      setFormData((prevState) => ({
+        ...prevState,
+        [name]: value,
+      }))
+    }
   }
 
   const onIngredientChange = (index, value) => {
@@ -33,17 +49,26 @@ const AddRecipe = () => {
     }))
   }
 
-  const addIngredient = () => {
+  const onMethodChange = (index, value) => {
+    const updated = [...formData.method]
+    updated[index] = value
     setFormData((prevState) => ({
       ...prevState,
-      ingredients: [...prevState.ingredients, ''],
+      method: updated,
     }))
   }
 
-  const removeIngredient = (index) => {
-    const updated = [...formData.ingredients]
+  const addfield = (field) => {
+    setFormData((prevState) => ({
+      ...prevState,
+      [field]: [...prevState[field], ''],
+    }))
+  }
+
+  const removeField = (field, index) => {
+    const updated = [...formData[field]]
     updated.splice(index, 1)
-    setFormData((prevState) => ({ ...prevState, ingredients: updated }))
+    setFormData((prevState) => ({ ...prevState, [field]: updated }))
   }
 
   return (
@@ -140,13 +165,13 @@ const AddRecipe = () => {
                   required
                 />
                 <select
-                  name='cookTime'
-                  value={cookTime}
+                  name='cookUnit'
+                  value={cookUnit}
                   onChange={onChange}
                   className='border-2 border-gray-300 text-gray-400 rounded-md h-[43px] w-full '
                 >
-                  <option value={cookTime}>Minutes</option>
-                  <option value={cookTime}>Hours</option>
+                  <option value='minutes'>Minutes</option>
+                  <option value='hours'>Hours</option>
                 </select>
               </div>
             </div>
@@ -156,9 +181,7 @@ const AddRecipe = () => {
         {/* Ingredients */}
         <div className='bg-white shadow-md p-2 rounded-lg'>
           <div className='flex flex-col py-4'>
-            <label htmlFor='indredients' className='text-2xl'>
-              Ingredients
-            </label>
+            <label className='text-2xl'>Ingredients</label>
             <div className='flex flex-col gap-2'>
               {formData.ingredients.map((item, index) => (
                 <span key={index} className='flex items-center gap-2'>
@@ -174,7 +197,7 @@ const AddRecipe = () => {
                   <button
                     type='button'
                     className='text-xl text-red-500'
-                    onClick={() => removeIngredient(index)}
+                    onClick={() => removeField('ingredients', index)}
                   >
                     <RiDeleteBin6Line />
                   </button>
@@ -183,10 +206,46 @@ const AddRecipe = () => {
 
               <button
                 type='button'
-                onClick={addIngredient}
+                onClick={() => addfield('ingredients')}
                 className=' p-2 border-2 w-1/3 rounded-lg mt-2'
               >
                 Add Ingredient
+              </button>
+            </div>
+          </div>
+        </div>
+
+        {/* Methods */}
+        <div className='bg-white shadow-md p-2 rounded-lg'>
+          <div className='flex flex-col py-4'>
+            <label className='text-2xl'>Methods</label>
+            <div className='flex flex-col gap-2'>
+              {formData.method.map((item, index) => (
+                <ol key={index} className='flex items-center gap-2'>
+                  <input
+                    type='text'
+                    name='method'
+                    value={item}
+                    onChange={(e) => onMethodChange(index, e.target.value)}
+                    className='border-2 border-gray-300 w-full rounded-md p-2 mt-1'
+                    placeholder='Add a method'
+                    required
+                  />
+                  <button
+                    type='button'
+                    className='text-xl text-red-500'
+                    onClick={() => removeField('method', index)}
+                  >
+                    <RiDeleteBin6Line />
+                  </button>
+                </ol>
+              ))}
+              <button
+                type='button'
+                onClick={() => addfield('method')}
+                className=' p-2 border-2 w-1/3 rounded-lg mt-2'
+              >
+                Add Method
               </button>
             </div>
           </div>
