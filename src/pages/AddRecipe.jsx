@@ -9,7 +9,7 @@ const AddRecipe = () => {
     description: '',
     serves: '',
     cookTime: '',
-    ingredients: [],
+    ingredients: ['', '', ''],
     method: [],
   })
 
@@ -23,6 +23,29 @@ const AddRecipe = () => {
       [name]: value,
     }))
   }
+
+  const onIngredientChange = (index, value) => {
+    const updated = [...formData.ingredients]
+    updated[index] = value
+    setFormData((prevState) => ({
+      ...prevState,
+      ingredients: updated,
+    }))
+  }
+
+  const addIngredient = () => {
+    setFormData((prevState) => ({
+      ...prevState,
+      ingredients: [...prevState.ingredients, ''],
+    }))
+  }
+
+  const removeIngredient = (index) => {
+    const updated = [...formData.ingredients]
+    updated.splice(index, 1)
+    setFormData((prevState) => ({ ...prevState, ingredients: updated }))
+  }
+
   return (
     <div className='font-hostGrotesk bg-white p-3 py-10'>
       <header className='font-bold text-2xl'>Recipe Information</header>
@@ -130,40 +153,41 @@ const AddRecipe = () => {
           </div>
         </div>
 
+        {/* Ingredients */}
         <div className='bg-white shadow-md p-2 rounded-lg'>
           <div className='flex flex-col py-4'>
             <label htmlFor='indredients' className='text-2xl'>
               Ingredients
             </label>
             <div className='flex flex-col gap-2'>
-              <input
-                type='text'
-                name='ingredients'
-                value={ingredients}
-                onChange={onChange}
-                className='border-2 border-gray-300 rounded-md p-2 mt-1'
-                placeholder='Add ingredient'
-                required
-              />
-              <input
-                type='text'
-                name='ingredients'
-                value={ingredients}
-                onChange={onChange}
-                className='border-2 border-gray-300 rounded-md p-2 mt-1'
-                placeholder='Add another ingredient'
-                required
-              />
-              <input
-                type='text'
-                name='ingredients'
-                value={ingredients}
-                onChange={onChange}
-                className='border-2 border-gray-300 rounded-md p-2 mt-1'
-                placeholder='Add another ingredient'
-                required
-              />
-              <RiDeleteBin6Line />
+              {formData.ingredients.map((item, index) => (
+                <span key={index} className='flex items-center gap-2'>
+                  <input
+                    type='text'
+                    name='ingredients'
+                    value={item}
+                    onChange={(e) => onIngredientChange(index, e.target.value)}
+                    className='border-2 border-gray-300 w-full rounded-md p-2 mt-1'
+                    placeholder='Add an ingredient'
+                    required
+                  />
+                  <button
+                    type='button'
+                    className='text-xl text-red-500'
+                    onClick={() => removeIngredient(index)}
+                  >
+                    <RiDeleteBin6Line />
+                  </button>
+                </span>
+              ))}
+
+              <button
+                type='button'
+                onClick={addIngredient}
+                className=' p-2 border-2 w-1/3 rounded-lg mt-2'
+              >
+                Add Ingredient
+              </button>
             </div>
           </div>
         </div>
