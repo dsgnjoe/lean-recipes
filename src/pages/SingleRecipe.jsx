@@ -110,7 +110,7 @@ const SingleRecipe = () => {
             <div className='md:w-full'>
               <h3 className='font-league text-3xl'>Ingredients</h3>
               <div className='flex flex-col p-2 bg-white my-5'>
-                {recipe.ingredient?.map((item, index) => (
+                {recipe.ingredients?.map((item, index) => (
                   <ul
                     key={index}
                     className={`py-2 px-3 text-gray-500 ${
